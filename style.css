@@ -68,11 +68,13 @@ section{
 }
 
 .heading{
-    text-align: center;
+
     font-size: 5rem;
     color:var(--black);
     text-transform: uppercase;
     padding-bottom: 2rem;
+    line-height: 4.5rem;
+    text-align: left;
 }
 
 .heading span{
@@ -541,70 +543,8 @@ section{
     
 }
 
-.page1, .page2, .page3,.page4,.page5,.page6{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-start;
-}
-
-.page1 .box1{
-    width: 100%;
-    
-}
-.page1 .box2{
-    padding: 1rem;
-    width:100%;
-    height: 100%;
-}
-.page2 .box1{
-    width: 44%;
-    min-height: 37.2rem;
-}
-.page2 .box2{
-    padding: 1rem;
-    width:56%;
-    height: 100%;
-}
-.page3 .box1{
-    width: 30%;
-    min-height: 50rem;
-}
-.page3 .box2{
-    padding: 1rem;
-    width:70%;
-    height: 100%;
-}
-.page4 .box1{
-    width: 50%;
-    min-height: 40rem;
-}
-.page4 .box2{
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-}
-.page5 .box1{
-    width: 50%;
-    min-height: 40rem;
-}
-.page5 .box2{
-    padding: 1rem;
-    width: 50%;
-    height: 100%;
-}
 
 
-
-
-
-.box3{
-    width: 100%;
-}
-
-.box2 img{
-    height: 100% ;
-}
 
 * {box-sizing: border-box;}
 body {font-family: Verdana, sans-serif;}
@@ -635,6 +575,7 @@ img {vertical-align: middle;}
     float: left;
     z-index: 12;
     line-height: 4rem;
+    text-align: left;
 }
 #africa-home{
     display: flex;
@@ -755,10 +696,7 @@ img {vertical-align: middle;}
        top: -1.5rem;
     }
    
-    .box2{
-        padding: .2rem;
-        width: 100%;
-    }
+    
     
 
 }
