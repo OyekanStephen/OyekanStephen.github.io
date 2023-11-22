@@ -46,6 +46,7 @@ body.active{
 section{
     min-height: 100vh;
     padding:2rem;
+    padding-top: 8em;
     
 }
 
@@ -74,7 +75,7 @@ section{
     text-transform: uppercase;
     padding-bottom: 2rem;
     line-height: 4.5rem;
-    text-align: left;
+    text-align: center;
 }
 
 .heading span{
@@ -175,6 +176,11 @@ section{
 #theme-toggler:hover{
     color:var(--green);
     box-shadow: var(--box-shadow-inset);
+}
+
+#about{
+    box-shadow: var(--box-shadow);
+   
 }
 
 .home{
@@ -340,13 +346,12 @@ section{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
     gap:1.5rem;
-    padding: 8rem;
+    padding: 10rem;
     padding-top: 0px;
 }
 
 .services .box-container .box{
-   
-    padding:4rem;
+    padding: 4rem;
     height: 40rem;
     width: 40rem;
     border-radius: .5rem;
@@ -490,15 +495,13 @@ section{
 .credits{
     font-size: 2rem;
     text-align: center;
-    padding:2.5rem 1rem;
-    margin-top: 1rem;
-    border-top: var(--border);
+    justify-content: center;
+    display: flex;
+    padding: 0;
     color:var(--black);
+    
 }
 
-.credits span{
-    color: var(--green);
-}
 
 
 /* africa starts here */
@@ -527,9 +530,8 @@ section{
     
 }
 
-#page1{
-    padding-top: 50px;
-}
+
+
     
 .page-text{
     text-align: justify;
@@ -539,8 +541,11 @@ section{
     border-radius: .5rem;
     box-shadow: var(--box-shadow);
     box-sizing: border-box;
-    padding: 1rem;
-    
+    padding: .5rem;  
+}
+.PHOTO img{
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
 }
 
 
@@ -552,41 +557,37 @@ body {font-family: Verdana, sans-serif;}
 img {vertical-align: middle;}
 
 .page1header{
-    margin-left:auto;
-    margin-right:auto;
-    top: 0px;
-    margin-top: 2rem ;
-    width: 100%;
-    background-color: var(--bg-color);
-    box-shadow: var(--box-shadow);
-    z-index: 0;
+    position: relative;
     overflow: hidden;
-    height: min-content;
-    max-height: 17rem;
+    z-index: 0;
     
 }
-.page1header .PHOTO{
-    position: relative;
+.page1header img{
+    width: 100%;
+    height: auto;
+    display: block;
+    border-top-right-radius:1.2rem ;
+    border-top-left-radius: 1.2rem;
+
 }
-.page1header .africa_div{
-    position: relative;
-    bottom: 10rem ;
-    margin: .2rem;
-    float: left;
-    z-index: 12;
-    line-height: 4rem;
+.page1header h1{   
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
     text-align: left;
 }
 #africa-home{
     display: flex;
     align-items: center;
     justify-content: center;
-    background-image: url(back.png);
-    background-position: center;
-    background-repeat: no-repeat;
+    text-align: center;
     
 }
 
+.africa-sub-heading{
+   font-size: 2rem;
+}
 
 .slideshow-container {
   max-width: 1000px;
@@ -635,9 +636,13 @@ img {vertical-align: middle;}
 /* media queries  */
 
 @media (max-width:991px){
+    section{
+        min-height: 30vh;
+    }
+    
 
     html{
-        font-size: 55%;
+        font-size: 50%;
     }
 
     body{
@@ -667,20 +672,19 @@ img {vertical-align: middle;}
         padding-top: 0px;
     }
     
-    .box1{
-        width: 100%;
-        min-height: 0rem;
-        
-    }
+    
 
  
     
 }
 
 @media (max-width:450px){
+    section{
+        min-height: 30vh;
+    }
 
     html{
-        font-size: 50%;
+        font-size: 40%;
     }
 
     .header{
@@ -689,10 +693,10 @@ img {vertical-align: middle;}
     }
   
     .africa-navbar a{
-        padding: 0.5em;
+        padding: 0.2em;
+        
     }
     .africa-navbar{
-       align-items: center;
        top: -1.5rem;
     }
    
@@ -702,10 +706,16 @@ img {vertical-align: middle;}
 }
 
 @media (max-width: 300px) {
+    section{
+        min-height: 30vh;
+    }
     .text {font-size: 11px}
-
+    html{
+        font-size: 30%;
+    }
     .africa-navbar a{
-        padding:1rem;
+        padding:.6rem;
+        align-items: center;
     
     }
     .africa-navbar{
