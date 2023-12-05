@@ -108,20 +108,9 @@ function showSlides(slideSetIndex, slideClass, dotClass) {
 
 
 
-//   contact form email send js
-    function sendEmail(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "stephenoyekan6@gmail.com",
-            Password : "1181571223748F93ADF9A4D3E2D290C6147E",
-            To : 'oyekanstephen8@gmail.com',
-            From : document.getElementById("email").value,
-            Subject : "new contact form enquiry",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-    }
+
+
+    
     //  typing effect starts here
     var TxtType = function(el, toRotate, period) {
       this.toRotate = toRotate;
