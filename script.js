@@ -168,4 +168,4 @@ function showSlides(slideSetIndex, slideClass, dotClass) {
       css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
       document.body.appendChild(css);
   };
-  // typing effect ends here
+  // typing effect ends here 
