@@ -241,25 +241,28 @@ section{
 }
 
 .about .row .box-container{
-    flex:1 1 18rem;
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    padding-top: 4px;
 }
 
 .about .row .box-container .box{
-    flex:1 1 18rem;
-    text-align: center;
-    padding: 3rem;
-    border-radius: .5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 2rem;
+    width: 24rem;
+    height: 30rem;
     box-shadow: var(--box-shadow);
 }
+
 
 .about .row .box-container .box h3{
     font-size: 2rem;
     color:var(--black);
-    line-height: 1.1;
 }
+
 
 .about .row .box-container .box p, .africa-text,  .page-text{
     font-size: 1.7rem;
