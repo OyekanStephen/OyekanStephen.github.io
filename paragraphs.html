@@ -31,6 +31,86 @@
   </header>
 
 
+    <div class="slider-container">
+        <div class="slider">
+            <div class="slide">
+              <h2>UNDERSTANDING THE CADENCE</h2>
+              <p><span>"</span>I closed my eyes and focused all my attention on the music, I listened with all my being trying to understand the meaning behind the cadence. Da-gun-da-gun the echoes flowed in the air pulsating its hypnotic embrace. At first, the beats sounded like a foreign language, but I could hear different tones and rhythms that matched the pattern of the Yoruba language, each beat rhythm telling a different story. Clarity emerged slowly, and I found myself nodding in time with its message, the beats of the drum became crystal clear. It was as if a veil had been lifted from my mind. I felt an incredible sense of peace and understanding. I realized I spent my childhood wondering how complex and difficult it was to understand the talking drum when all I had to do was focus and listen.
+              <span>"</span></p>
+            </div>
+            <div class="slide">
+              <h2>CHAOS TO CHAOS</h2>
+              <p><span>"</span>From chaos to chaos particles dance succumbing to their ever-growing randomness creating the order of existence. Centuries of formulas and theories attempt to grasp this reality. Yet, it's like entropy dances within the core understanding of the universe. Propelling new scientific conundrums that confuse the current comprehension. Can one day physics capture the true meaning behind the vastness? Or do we just keep being the observer, trying to tune to the ever-unstable resonance the universe plays in? 
+
+              <span>"</span></p>
+            </div>
+            <div class="slide">
+              <h2>IS MUSIC A SOUND?</h2>
+              <p><span>"</span>From chaos to chaos particles dance succumbing to their ever-growing randomness creating the order of existence. Centuries of formulas and theories attempt to grasp this reality. Yet, it's like entropy dances within the core understanding of the universe. Propelling new scientific conundrums that confuse the current comprehension. Can one day physics capture the true meaning behind the vastness? Or do we just keep being the observer, trying to tune to the ever-unstable resonance the universe plays in? 
+
+              <span>"</span></p>
+            </div>
+        </div>
+
+        <button class="prev-btn">&#10094;</button>
+        <button class="next-btn">&#10095;</button>
+        <div class="dot-container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+  
+<script>
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+const dots = document.querySelectorAll('.dot');
+
+let currentSlideIndex = 0;
+let slideWidth = slides[0].clientWidth;
+
+slider.style.width = slideWidth * slides.length + 'px';
+
+function moveToSlide(slideIndex) {
+  slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  currentSlideIndex = slideIndex;
+
+  // Update dot indicators
+  dots.forEach(dot => dot.classList.remove('active'));
+  dots[currentSlideIndex].classList.add('active');
+}
+
+prevBtn.addEventListener('click', () => {
+  const prevSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+  moveToSlide(prevSlideIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  const nextSlideIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
+  moveToSlide(nextSlideIndex);
+});
+
+dots.forEach((dot, index) => {
+  dot.addEventListener('click', () => {
+    moveToSlide(index);
+  });
+});
+
+
+</script>
+
   <script src="/script.js"></script>
 </body>
 </html>

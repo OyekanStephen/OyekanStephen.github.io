@@ -169,3 +169,8 @@ function showSlides(slideSetIndex, slideClass, dotClass) {
       document.body.appendChild(css);
   };
   // typing effect ends here 
+
+
+
+
+
