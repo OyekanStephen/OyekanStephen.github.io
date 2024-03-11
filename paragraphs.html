@@ -11,7 +11,6 @@
         <title>Paragraphs By Stephen</title>
 </head>
 <body>
-
   <header class="header">
 
     <div class="user">
@@ -27,10 +26,8 @@
       <a class="page-btn" href="/index.html#services">writings</a>
       <a class="page-btn" href="/index.html#contact">Contact</a>
     </nav>
-
-    <div id="theme-toggler" class="fas fa-moon"></div>
   </header>
-
+  <div id="theme-toggler" class="fas fa-moon"></div>
 
     <div class="slider-container">
         <div class="slider">
@@ -55,23 +52,13 @@
 
         <button class="prev-btn">&#10094;</button>
         <button class="next-btn">&#10095;</button>
-        <div class="dot-container">
-            <span class="dot"></span>
-            <span class="dot"></span>
-            <span class="dot"></span>
-        </div>
     </div>
-
-
-
-
-  
+ 
 <script>
 const slider = document.querySelector('.slider');
 const slides = document.querySelectorAll('.slide');
 const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
-const dots = document.querySelectorAll('.dot');
 
 let currentSlideIndex = 0;
 let slideWidth = slides[0].clientWidth;
@@ -81,10 +68,6 @@ slider.style.width = slideWidth * slides.length + 'px';
 function moveToSlide(slideIndex) {
   slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
   currentSlideIndex = slideIndex;
-
-  // Update dot indicators
-  dots.forEach(dot => dot.classList.remove('active'));
-  dots[currentSlideIndex].classList.add('active');
 }
 
 prevBtn.addEventListener('click', () => {
@@ -96,15 +79,8 @@ nextBtn.addEventListener('click', () => {
   const nextSlideIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
   moveToSlide(nextSlideIndex);
 });
-
-dots.forEach((dot, index) => {
-  dot.addEventListener('click', () => {
-    moveToSlide(index);
-  });
-});
-
-
 </script>
+
 <script src="script.js"></script>
 </body>
 </html>
