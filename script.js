@@ -23,93 +23,6 @@ themeToggler.onclick = () =>{
 }
 // toggle theme ends here 
 
-
-
-// oh fucking stressful slideshow starts here
-let slideIndex1 = 0;
-let slideIndex2 = 0;
-let slideIndex3 = 0;
-let slideIndex4 = 0;
-let slideIndex5 = 0;
-let slideIndex6 = 0;
-
-showSlides(1, "mySlides", "dot");
-showSlides(2, "mySlides2", "dot2");
-showSlides(3, "mySlides3", "dot3");
-showSlides(4, "mySlides4", "dot4");
-showSlides(5, "mySlides5", "dot5");
-showSlides(6, "mySlides6", "dot6");
-
-function showSlides(slideSetIndex, slideClass, dotClass) {
-  const interval = 2000; // Change image every 2 seconds
-
-  let slides = document.querySelectorAll(`.${slideClass}`);
-  let dots = document.querySelectorAll(`.${dotClass}`);
-
-  function updateSlide() {
-    let i;
-    for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-      dots[i].classList.remove("active");
-    }
-
-    if (slideSetIndex === 1) {
-      slides[slideIndex1].style.display = "block";
-      dots[slideIndex1].classList.add("active");
-      slideIndex1++;
-      if (slideIndex1 >= slides.length) {
-        slideIndex1 = 0;
-      }
-    } else if (slideSetIndex === 2) {
-      slides[slideIndex2].style.display = "block";
-      dots[slideIndex2].classList.add("active");
-      slideIndex2++;
-      if (slideIndex2 >= slides.length) {
-        slideIndex2 = 0;
-      }
-    }
-     else if (slideSetIndex === 3) {
-      slides[slideIndex3].style.display = "block";
-      dots[slideIndex3].classList.add("active");
-      slideIndex3++;
-      if (slideIndex3 >= slides.length) {
-        slideIndex3 = 0;
-      }
-    }
-     else if (slideSetIndex === 4) {
-      slides[slideIndex4].style.display = "block";
-      dots[slideIndex4].classList.add("active");
-      slideIndex4++;
-      if (slideIndex4 >= slides.length) {
-        slideIndex4 = 0;
-      }
-    }
-     else if (slideSetIndex === 5) {
-      slides[slideIndex5].style.display = "block";
-      dots[slideIndex5].classList.add("active");
-      slideIndex5++;
-      if (slideIndex5 >= slides.length) {
-        slideIndex5 = 0;
-      }
-    }
-     else if (slideSetIndex === 6) {
-      slides[slideIndex6].style.display = "block";
-      dots[slideIndex6].classList.add("active");
-      slideIndex6++;
-      if (slideIndex6 >= slides.length) {
-        slideIndex6 = 0;
-      }
-    }
-  }
-
-  setInterval(updateSlide, interval);
-}
-// slides ends here
-
-
-
-
-
     
     //  typing effect starts here
     var TxtType = function(el, toRotate, period) {
@@ -171,6 +84,30 @@ function showSlides(slideSetIndex, slideClass, dotClass) {
   // typing effect ends here 
 
 
+// oh fucking stressful slide starts here
+const slider = document.querySelector('.slider');
+const slides = document.querySelectorAll('.slide');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
 
+let currentSlideIndex = 0;
+let slideWidth = slides[0].clientWidth;
+
+slider.style.width = slideWidth * slides.length + 'px';
+
+function moveToSlide(slideIndex) {
+  slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+  currentSlideIndex = slideIndex;
+}
+
+prevBtn.addEventListener('click', () => {
+  const prevSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
+  moveToSlide(prevSlideIndex);
+});
+
+nextBtn.addEventListener('click', () => {
+  const nextSlideIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
+  moveToSlide(nextSlideIndex);
+});
 
 

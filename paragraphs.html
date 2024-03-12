@@ -27,6 +27,7 @@
       <a class="page-btn" href="/index.html#contact">Contact</a>
     </nav>
   </header>
+  <div id="menu-btn" class="fas fa-bars"></div>
   <div id="theme-toggler" class="fas fa-moon"></div>
 
     <div class="slider-container">
@@ -42,44 +43,13 @@
 
               <span>"</span></p>
             </div>
-            <div class="slide">
-              <h2>IS MUSIC A SOUND?</h2>
-              <p><span>"</span>From chaos to chaos particles dance succumbing to their ever-growing randomness creating the order of existence. Centuries of formulas and theories attempt to grasp this reality. Yet, it's like entropy dances within the core understanding of the universe. Propelling new scientific conundrums that confuse the current comprehension. Can one day physics capture the true meaning behind the vastness? Or do we just keep being the observer, trying to tune to the ever-unstable resonance the universe plays in? 
-
-              <span>"</span></p>
-            </div>
         </div>
 
         <button class="prev-btn">&#10094;</button>
         <button class="next-btn">&#10095;</button>
     </div>
  
-<script>
-const slider = document.querySelector('.slider');
-const slides = document.querySelectorAll('.slide');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
 
-let currentSlideIndex = 0;
-let slideWidth = slides[0].clientWidth;
-
-slider.style.width = slideWidth * slides.length + 'px';
-
-function moveToSlide(slideIndex) {
-  slider.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
-  currentSlideIndex = slideIndex;
-}
-
-prevBtn.addEventListener('click', () => {
-  const prevSlideIndex = currentSlideIndex === 0 ? slides.length - 1 : currentSlideIndex - 1;
-  moveToSlide(prevSlideIndex);
-});
-
-nextBtn.addEventListener('click', () => {
-  const nextSlideIndex = currentSlideIndex === slides.length - 1 ? 0 : currentSlideIndex + 1;
-  moveToSlide(nextSlideIndex);
-});
-</script>
 
 <script src="script.js"></script>
 </body>
