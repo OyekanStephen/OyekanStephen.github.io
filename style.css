@@ -566,11 +566,13 @@ img {vertical-align: middle;}
    font-size: 2rem;
 }
 
+
+
 .slider-container {
     position: relative;
-    width: 100%;
     height: 100vh;
     overflow: hidden;
+    margin: 6rem;
 }
 .slider{
     display: flex;
@@ -582,9 +584,10 @@ img {vertical-align: middle;}
 }
 
 .slide {
+    padding: 2rem;
+    margin: 1rem;
     width: 50%;
     height: 50rem;
-    padding: 6rem;
     box-shadow: var(--box-shadow);
 }
 
@@ -594,6 +597,7 @@ img {vertical-align: middle;}
 }
 
 .slide p{
+    margin: 2rem;
     color: var(--light-color);
     font-size: 2rem;
 }
@@ -602,29 +606,18 @@ img {vertical-align: middle;}
 }
 
 .prev-btn, .next-btn {
-    display: inline-block;
     margin: 0rem 20rem 0 20rem;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
     font-size: 2rem;
     padding: 10px;
-    border: none;
-    cursor: pointer;
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  .slide span {
+    font-style: italic;
+    color: #999; 
+  }
+  
 
 
 
